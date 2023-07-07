@@ -1,0 +1,6 @@
+<!--pages/chatGpt/index.wxml-->
+<view>
+  <view class="top_tip">ChatGpt 翻译</view>
+  <textarea bindinput="handleInput"></textarea>
+  <view class="button" bindtap="translate">翻译</view>
+</view>
