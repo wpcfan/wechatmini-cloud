@@ -7,8 +7,8 @@ cloud.init({
 
 // 获取openId云函数入口函数
 exports.main = async (event, context) => {
-  const apiBaseUrl = 'https://twigai.openai.azure.com/openai/deployments/twigchat35';
-  const apiKey = '07ff0fae445c4dafa549d9283781da0d';
+  const apiBaseUrl = '';
+  const apiKey = '';
   const query = {
     // 添加其他查询参数
     'api-version': '2023-03-15-preview'
