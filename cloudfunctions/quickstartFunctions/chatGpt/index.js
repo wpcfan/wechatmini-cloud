@@ -1,5 +1,4 @@
 const cloud = require('wx-server-sdk');
-import fetch from 'node-fetch';
 
 cloud.init({
   env: cloud.DYNAMIC_CURRENT_ENV
@@ -37,6 +36,9 @@ exports.main = async (event, context) => {
     body: JSON.stringify(postData),
   };
 
+  // mod.cjs
+  const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
+  
   try {
     const response = await fetch(url, requestOptions);
     const responseData = await response.json();
